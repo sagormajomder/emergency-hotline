@@ -46,7 +46,43 @@
       }
     </style>
   </head>
-  <body>
-    <h1 class="font-roboto">Hello</h1>
+  <body class="h-screen bg-[#F5FFF6]">
+    <header class="bg-white py-6">
+      <nav
+        class="flex flex-col sm:flex-row justify-between items-center max-w-[75rem] mx-auto lg:px-[3.75rem] px-5 gap-5 sm:gap-0">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2.5">
+          <img class="w-[50px]" src="./assets/logo.png" alt="website logo" />
+          <span class="font-roboto font-black text-[#006747] text-2xl leading-6"
+            >Emergency <br />
+            Service</span
+          >
+        </a>
+        <div class="flex gap-3 items-center flex-wrap justify-center">
+          <!-- pill 1 -->
+          <div
+            class="bg-[#41FF6B1A] flex justify-center items-center rounded-full p-3 w-[123px] gap-1.5">
+            <span id="likeNum" class="text-black font-extrabold">0</span>
+            <figure>
+              <img class="h-6" src="./assets/heart.png" alt="Heart Icon" />
+            </figure>
+          </div>
+          <!-- pill 2 -->
+          <div
+            class="bg-[#41FF6B1A] flex justify-center items-center rounded-full p-3 w-[123px] gap-1.5">
+            <span id="coinNum" class="text-black font-extrabold">100</span>
+            <figure>
+              <img class="h-6" src="./assets/coin.png" alt="Heart Icon" />
+            </figure>
+          </div>
+          <!-- pill 3 -->
+          <div
+            class="flex justify-center items-center rounded-full p-3 w-[123px] gap-1 text-white bg-primary">
+            <span class="font-extrabold" id="copyNum">0</span>
+            <span class="font-semibold">Copy</span>
+          </div>
+        </div>
+      </nav>
+    </header>
   </body>
 </html>
