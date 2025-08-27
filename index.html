@@ -89,9 +89,9 @@
           <!-- pill 2 -->
           <div
             class="bg-[#41FF6B1A] flex justify-center items-center rounded-full p-3 w-[123px] gap-1.5">
-            <span id="coinNum" class="text-black font-extrabold">100</span>
+            <span id="coinNum" class="text-black font-extrabold"></span>
             <figure>
-              <img class="h-6" src="./assets/coin.png" alt="Heart Icon" />
+              <img class="h-6" src="./assets/coin.png" alt="Coin Icon" />
             </figure>
           </div>
           <!-- pill 3 -->
@@ -165,7 +165,7 @@
                 Copy
               </button>
               <button
-                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                class="callBtn btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
                 <img src="./assets/call.svg" alt="Call Icon" />
                 Call
               </button>
@@ -206,7 +206,7 @@
                 Copy
               </button>
               <button
-                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                class="callBtn btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
                 <img src="./assets/call.svg" alt="Call Icon" />
                 Call
               </button>
@@ -248,7 +248,7 @@
                 Copy
               </button>
               <button
-                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                class="callBtn btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
                 <img src="./assets/call.svg" alt="Call Icon" />
                 Call
               </button>
@@ -274,7 +274,7 @@
             <div>
               <p
                 class="text-dark font-bold font-roboto text-[2rem] xs:text-[1.5rem] sm:text-[1.625rem]">
-                1994-999999
+                999
               </p>
               <!-- pill -->
               <p
@@ -289,7 +289,7 @@
                 Copy
               </button>
               <button
-                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                class="callBtn btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
                 <img src="./assets/call.svg" alt="Call Icon" />
                 Call
               </button>
@@ -332,7 +332,7 @@
                 Copy
               </button>
               <button
-                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                class="callBtn btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
                 <img src="./assets/call.svg" alt="Call Icon" />
                 Call
               </button>
@@ -375,7 +375,7 @@
                 Copy
               </button>
               <button
-                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                class="callBtn btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
                 <img src="./assets/call.svg" alt="Call Icon" />
                 Call
               </button>
@@ -401,7 +401,7 @@
             <div>
               <p
                 class="text-dark font-bold font-roboto text-[2rem] xs:text-[1.5rem] sm:text-[1.625rem]">
-                16216
+                16999
               </p>
               <!-- pill -->
               <p
@@ -416,7 +416,7 @@
                 Copy
               </button>
               <button
-                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                class="callBtn btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
                 <img src="./assets/call.svg" alt="Call Icon" />
                 Call
               </button>
@@ -457,7 +457,7 @@
                 Copy
               </button>
               <button
-                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                class="callBtn btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
                 <img src="./assets/call.svg" alt="Call Icon" />
                 Call
               </button>
@@ -500,7 +500,7 @@
                 Copy
               </button>
               <button
-                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                class="callBtn btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
                 <img src="./assets/call.svg" alt="Call Icon" />
                 Call
               </button>
@@ -526,26 +526,12 @@
               <h3 class="heading-tertiary">Call History</h3>
             </div>
             <button
+              id="clearBtn"
               class="flex justify-center items-center rounded-full p-3 w-[90px] gap-1 text-white bg-primary cursor-pointer">
               <span class="font-semibold">Clear</span>
             </button>
           </div>
-          <div class="space-y-6">
-            <div class="flex justify-between items-center">
-              <div class="">
-                <h4 class="heading-quaternary">জাতীয় জরুরি সেবা</h4>
-                <p>999</p>
-              </div>
-              <p class="text-dark">11:36:58 AM</p>
-            </div>
-            <div class="flex justify-between items-center">
-              <div class="">
-                <h4 class="heading-quaternary">জাতীয় জরুরি সেবা</h4>
-                <p>999</p>
-              </div>
-              <p class="text-dark">11:36:58 AM</p>
-            </div>
-          </div>
+          <div id="callHistoryParent" class="space-y-6"></div>
         </aside>
       </section>
     </main>
