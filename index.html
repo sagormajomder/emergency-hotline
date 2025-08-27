@@ -44,13 +44,29 @@
 
         --color-gray-light: #f2f2f2;
       }
+
+      @layer components {
+        .heading-secondary,
+        .heading-tertiary,
+        .heading-quaternary {
+          @apply text-dark;
+        }
+      }
+
+      @utility heading-secondary {
+        @apply text-2xl sm:text-xl font-bold;
+      }
+
+      @utility heading-tertiary {
+        @apply text-xl font-medium font-roboto;
+      }
     </style>
   </head>
-  <body class="h-screen bg-[#F5FFF6]">
+  <body class="min-h-screen bg-[#F5FFF6] text-gray-1">
     <!-- Header Section -->
     <header class="bg-white py-6">
       <nav
-        class="flex flex-col sm:flex-row justify-between items-center max-w-7xl mx-auto px-3 sm:px-6 xl:px-0 gap-5 sm:gap-0">
+        class="flex flex-col sm:flex-row justify-between items-center max-w-7xl mx-auto px-6 xl:px-0 gap-5 sm:gap-0">
         <!-- Logo -->
         <a href="#" class="flex items-center gap-2.5">
           <img class="w-[50px]" src="./assets/logo.png" alt="website logo" />
@@ -85,20 +101,412 @@
         </div>
       </nav>
     </header>
-    <!-- Hero Section -->
-    <section
-      class="bg-linear-90 from-[#013223] from-0% via-[#006747] via-50% to-[#013223] to-100%">
-      <div
-        class="max-w-7xl mx-auto px-3 sm:px-6 xl:px-0 py-5 flex flex-col items-center gap-3 text-white">
-        <figure class="w-[92px]">
-          <img src="./assets/logo-dark.png" alt="Logo Dark" />
-        </figure>
-        <h1 class="font-semibold text-[2.5rem]">জরুরি সেবা ডিরেক্টরি</h1>
-        <p class="text-xl text-center">
-          Government Emergency Services at Your Fingertip – A Project by
-          Government of the People’s Republic of Bangladesh
-        </p>
-      </div>
-    </section>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="bg-linear-90 from-[#013223] from-0% via-[#006747] via-50% to-[#013223] to-100%">
+        <div
+          class="max-w-7xl mx-auto px-6 xl:px-0 py-5 flex flex-col items-center gap-3 text-white">
+          <figure class="w-[92px]">
+            <img src="./assets/logo-dark.png" alt="Logo Dark" />
+          </figure>
+          <h1 class="font-semibold text-[2.5rem]">জরুরি সেবা ডিরেক্টরি</h1>
+          <p class="text-xl text-center">
+            Government Emergency Services at Your Fingertip – A Project by
+            Government of the People’s Republic of Bangladesh
+          </p>
+        </div>
+      </section>
+      <!-- Dashboard section -->
+      <section
+        class="max-w-7xl mx-auto px-6 xl:px-0 py-10 flex flex-col lg:flex-row lg:gap-4 gap-6">
+        <!-- Directory section -->
+        <section
+          class="grid grid-cols-1 justify-center sm:grid-cols-2 lg:grid-cols-3 lg:gap-4 gap-6 md:basis-[70%]">
+          <!-- Card 1 -->
+          <article
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            <div class="flex justify-between items-center mb-4">
+              <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
+                <img src="./assets/emergency.png" alt="Emergency Icon" />
+              </figure>
+              <i class="fa-regular fa-heart text-gray-1 text-xl"></i>
+            </div>
+
+            <div>
+              <h2 class="heading-secondary">জাতীয় জরুরি সেবা</h2>
+              <p class="font-roboto mb-6">National Emergency</p>
+            </div>
+            <div>
+              <p
+                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                999
+              </p>
+              <!-- pill -->
+              <p
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                সার্বজনীন
+              </p>
+            </div>
+
+            <div class="flex items-center gap-2 w-full">
+              <button
+                class="btn bg-white basis-1/2 text-gray-1 border-gray-2 hover:bg-gray-2 font-roboto">
+                <i class="fa-regular fa-copy"></i>
+                Copy
+              </button>
+              <button
+                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                <img src="./assets/call.svg" alt="Call Icon" />
+                Call
+              </button>
+            </div>
+          </article>
+          <!-- Card 2 -->
+          <article
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            <div class="flex justify-between items-center mb-4">
+              <figure class="rounded-xl w-[50px] bg-[#DFEFFF] p-3.5">
+                <img src="./assets/police.png" alt="Police Icon" />
+              </figure>
+              <i class="fa-regular fa-heart text-gray-1 text-xl"></i>
+            </div>
+            <div>
+              <h2 class="heading-secondary">পুলিশ</h2>
+              <p class="font-roboto mb-6">Police</p>
+            </div>
+            <div>
+              <p
+                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                999
+              </p>
+              <!-- pill -->
+              <p
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                পুলিশ
+              </p>
+            </div>
+            <div class="flex items-center gap-2 w-full">
+              <button
+                class="btn bg-white basis-1/2 text-gray-1 border-gray-2 hover:bg-gray-2 font-roboto">
+                <i class="fa-regular fa-copy"></i>
+                Copy
+              </button>
+              <button
+                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                <img src="./assets/call.svg" alt="Call Icon" />
+                Call
+              </button>
+            </div>
+          </article>
+          <!-- Card 3 -->
+          <article
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            <div class="flex justify-between items-center mb-4">
+              <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
+                <img src="./assets/fire-service.png" alt="Fire Service Icon" />
+              </figure>
+              <i class="fa-regular fa-heart text-gray-1 text-xl"></i>
+            </div>
+            <div>
+              <h2 class="heading-secondary">ফায়ার সার্ভিস</h2>
+              <p class="font-roboto mb-6">Fire Service</p>
+            </div>
+            <div>
+              <p
+                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                999
+              </p>
+              <!-- pill -->
+              <p
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                ফায়ার
+              </p>
+            </div>
+
+            <div class="flex items-center gap-2 w-full">
+              <button
+                class="btn bg-white basis-1/2 text-gray-1 border-gray-2 hover:bg-gray-2 font-roboto">
+                <i class="fa-regular fa-copy"></i>
+                Copy
+              </button>
+              <button
+                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                <img src="./assets/call.svg" alt="Call Icon" />
+                Call
+              </button>
+            </div>
+          </article>
+          <!-- Card 4 -->
+          <article
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            <div class="flex justify-between items-center mb-4">
+              <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
+                <img src="./assets/ambulance.png" alt="Ambulance Icon" />
+              </figure>
+              <i class="fa-regular fa-heart text-gray-1 text-xl"></i>
+            </div>
+            <div>
+              <h2 class="heading-secondary">অ্যাম্বুলেন্স</h2>
+              <p class="font-roboto mb-6">Ambulance</p>
+            </div>
+            <div>
+              <p
+                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                1994-999999
+              </p>
+              <!-- pill -->
+              <p
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                স্বাস্থ্য
+              </p>
+            </div>
+            <div class="flex items-center gap-2 w-full">
+              <button
+                class="btn bg-white basis-1/2 text-gray-1 border-gray-2 hover:bg-gray-2 font-roboto">
+                <i class="fa-regular fa-copy"></i>
+                Copy
+              </button>
+              <button
+                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                <img src="./assets/call.svg" alt="Call Icon" />
+                Call
+              </button>
+            </div>
+          </article>
+          <!-- Card 5 -->
+          <article
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            <div class="flex justify-between items-center mb-4">
+              <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
+                <img
+                  src="./assets/prenatal-care.png"
+                  alt="Prenatal Care Icon" />
+              </figure>
+              <i class="fa-regular fa-heart text-gray-1 text-xl"></i>
+            </div>
+            <div>
+              <h2 class="heading-secondary">নারী ও শিশু সহায়তা</h2>
+              <p class="font-roboto mb-6">Women & Child Helpline</p>
+            </div>
+            <div>
+              <p
+                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                109
+              </p>
+              <!-- pill -->
+              <p
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                সহায়তা
+              </p>
+            </div>
+            <div class="flex items-center gap-2 w-full">
+              <button
+                class="btn bg-white basis-1/2 text-gray-1 border-gray-2 hover:bg-gray-2 font-roboto">
+                <i class="fa-regular fa-copy"></i>
+                Copy
+              </button>
+              <button
+                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                <img src="./assets/call.svg" alt="Call Icon" />
+                Call
+              </button>
+            </div>
+          </article>
+          <!-- Card 6 -->
+          <article
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            <div class="flex justify-between items-center mb-4">
+              <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
+                <img
+                  src="./assets/anti-corruption.png"
+                  alt="Anti Corruption Icon" />
+              </figure>
+              <i class="fa-regular fa-heart text-gray-1 text-xl"></i>
+            </div>
+            <div>
+              <h2 class="heading-secondary">দুদক</h2>
+              <p class="font-roboto mb-6">Anti-Corruption</p>
+            </div>
+            <div>
+              <p
+                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                106
+              </p>
+              <!-- pill -->
+              <p
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                সরকারি
+              </p>
+            </div>
+            <div class="flex items-center gap-2 w-full">
+              <button
+                class="btn bg-white basis-1/2 text-gray-1 border-gray-2 hover:bg-gray-2 font-roboto">
+                <i class="fa-regular fa-copy"></i>
+                Copy
+              </button>
+              <button
+                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                <img src="./assets/call.svg" alt="Call Icon" />
+                Call
+              </button>
+            </div>
+          </article>
+          <!-- Card 7 -->
+          <article
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            <div class="flex justify-between items-center mb-4">
+              <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
+                <img src="./assets/outage.png" alt="Electricity Outage Icon" />
+              </figure>
+              <i class="fa-regular fa-heart text-gray-1 text-xl"></i>
+            </div>
+            <div>
+              <h2 class="heading-secondary">বিদ্যুৎ বিভ্রাট</h2>
+              <p class="font-roboto mb-6">Electricity Outage</p>
+            </div>
+            <div>
+              <p
+                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                16216
+              </p>
+              <!-- pill -->
+              <p
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                বিদ্যুৎ
+              </p>
+            </div>
+            <div class="flex items-center gap-2 w-full">
+              <button
+                class="btn bg-white basis-1/2 text-gray-1 border-gray-2 hover:bg-gray-2 font-roboto">
+                <i class="fa-regular fa-copy"></i>
+                Copy
+              </button>
+              <button
+                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                <img src="./assets/call.svg" alt="Call Icon" />
+                Call
+              </button>
+            </div>
+          </article>
+          <!-- Card 8 -->
+          <article
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            <div class="flex justify-between items-center mb-4">
+              <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
+                <img src="./assets/brac.png" alt="Brac Icon" />
+              </figure>
+              <i class="fa-regular fa-heart text-gray-1 text-xl"></i>
+            </div>
+            <div>
+              <h2 class="heading-secondary">ব্র্যাক</h2>
+              <p class="font-roboto mb-6">Brac</p>
+            </div>
+            <div>
+              <p
+                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                16445
+              </p>
+              <!-- pill -->
+              <p
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                এনজিও
+              </p>
+            </div>
+            <div class="flex items-center gap-2 w-full">
+              <button
+                class="btn bg-white basis-1/2 text-gray-1 border-gray-2 hover:bg-gray-2 font-roboto">
+                <i class="fa-regular fa-copy"></i>
+                Copy
+              </button>
+              <button
+                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                <img src="./assets/call.svg" alt="Call Icon" />
+                Call
+              </button>
+            </div>
+          </article>
+          <!-- Card 9 -->
+          <article
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            <div class="flex justify-between items-center mb-4">
+              <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
+                <img
+                  src="./assets/Bangladesh-Railway.png"
+                  alt="Bangladesh Railway Icon" />
+              </figure>
+              <i class="fa-regular fa-heart text-gray-1 text-xl"></i>
+            </div>
+            <div>
+              <h2 class="heading-secondary">বাংলাদেশ রেলওয়ে</h2>
+              <p class="font-roboto mb-6">Bangladesh Railway</p>
+            </div>
+            <div>
+              <p
+                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                163
+              </p>
+              <!-- pill -->
+              <p
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                পরিবহন
+              </p>
+            </div>
+            <div class="flex items-center gap-2 w-full">
+              <button
+                class="btn bg-white basis-1/2 text-gray-1 border-gray-2 hover:bg-gray-2 font-roboto">
+                <i class="fa-regular fa-copy"></i>
+                Copy
+              </button>
+              <button
+                class="btn basis-1/2 bg-primary font-roboto text-white hover:bg-[#013223]">
+                <img src="./assets/call.svg" alt="Call Icon" />
+                Call
+              </button>
+            </div>
+          </article>
+        </section>
+        <!-- Call history -->
+        <aside class="md:basis-[30%] bg-white px-4 py-6 rounded-xl">
+          <div class="flex items-center justify-between mb-5">
+            <div class="flex gap-1 items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              <h3 class="heading-tertiary">Call History</h3>
+            </div>
+            <button
+              class="flex justify-center items-center rounded-full p-3 w-[90px] gap-1 text-white bg-primary cursor-pointer">
+              <span class="font-semibold">Clear</span>
+            </button>
+          </div>
+          <div class="space-y-6">
+            <div class="flex justify-between items-center">
+              <div class="">
+                <h4 class="heading-quaternary">জাতীয় জরুরি সেবা</h4>
+                <p>999</p>
+              </div>
+              <p class="text-dark">11:36:58 AM</p>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="">
+                <h4 class="heading-quaternary">জাতীয় জরুরি সেবা</h4>
+                <p>999</p>
+              </div>
+              <p class="text-dark">11:36:58 AM</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
   </body>
 </html>
