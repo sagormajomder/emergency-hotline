@@ -30,6 +30,8 @@
         --font-hindMadurai: 'Hind Madurai', sans-serif;
       }
       @theme inline {
+        --breakpoint-xs: 30rem;
+
         --font-roboto: 'Roboto', sans-serif;
         --default-font-family: var(--font-hindMadurai), var(--font-serif);
 
@@ -54,7 +56,7 @@
       }
 
       @utility heading-secondary {
-        @apply text-2xl sm:text-xl font-bold;
+        @apply text-2xl sm:text-xl md:text-lg lg:text-xl xs:text-base font-bold;
       }
 
       @utility heading-tertiary {
@@ -110,7 +112,10 @@
           <figure class="w-[92px]">
             <img src="./assets/logo-dark.png" alt="Logo Dark" />
           </figure>
-          <h1 class="font-semibold text-[2.5rem]">জরুরি সেবা ডিরেক্টরি</h1>
+          <h1
+            class="font-semibold text-[2.5rem] xs:text-[1.875rem] lg:text-[2.5rem] text-center">
+            জরুরি সেবা ডিরেক্টরি
+          </h1>
           <p class="text-xl text-center">
             Government Emergency Services at Your Fingertip – A Project by
             Government of the People’s Republic of Bangladesh
@@ -122,10 +127,10 @@
         class="max-w-7xl mx-auto px-6 xl:px-0 py-10 flex flex-col lg:flex-row lg:gap-4 gap-6">
         <!-- Directory section -->
         <section
-          class="grid grid-cols-1 justify-center sm:grid-cols-2 lg:grid-cols-3 lg:gap-4 gap-6 md:basis-[70%]">
+          class="grid grid-cols-1 justify-center xs:grid-cols-2 md:grid-cols-3 lg:gap-4 gap-6 lg:basis-[72%]">
           <!-- Card 1 -->
           <article
-            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md xs:flex xs:flex-col xs:justify-between">
             <div class="flex justify-between items-center mb-4">
               <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
                 <img src="./assets/emergency.png" alt="Emergency Icon" />
@@ -135,16 +140,19 @@
 
             <div>
               <h2 class="heading-secondary">জাতীয় জরুরি সেবা</h2>
-              <p class="font-roboto mb-6">National Emergency</p>
+              <p
+                class="font-roboto mb-6 xs:text-[.75rem] sm:text-sm lg:text-base">
+                National Emergency
+              </p>
             </div>
             <div>
               <p
-                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                class="text-dark font-bold font-roboto text-[2rem] xs:text-[1.5rem] sm:text-[1.625rem]">
                 999
               </p>
               <!-- pill -->
               <p
-                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 xs:text-[.6875rem] sm:text-sm">
                 সার্বজনীন
               </p>
             </div>
@@ -164,7 +172,7 @@
           </article>
           <!-- Card 2 -->
           <article
-            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md xs:flex xs:flex-col xs:justify-between">
             <div class="flex justify-between items-center mb-4">
               <figure class="rounded-xl w-[50px] bg-[#DFEFFF] p-3.5">
                 <img src="./assets/police.png" alt="Police Icon" />
@@ -173,16 +181,19 @@
             </div>
             <div>
               <h2 class="heading-secondary">পুলিশ</h2>
-              <p class="font-roboto mb-6">Police</p>
+              <p
+                class="font-roboto mb-6 xs:text-[.75rem] sm:text-sm lg:text-base md:text-sm lg:text-base">
+                Police
+              </p>
             </div>
             <div>
               <p
-                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                class="text-dark font-bold font-roboto text-[2rem] xs:text-[1.5rem] sm:text-[1.625rem]">
                 999
               </p>
               <!-- pill -->
               <p
-                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 xs:text-[.6875rem] sm:text-sm">
                 পুলিশ
               </p>
             </div>
@@ -201,7 +212,7 @@
           </article>
           <!-- Card 3 -->
           <article
-            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md xs:flex xs:flex-col xs:justify-between">
             <div class="flex justify-between items-center mb-4">
               <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
                 <img src="./assets/fire-service.png" alt="Fire Service Icon" />
@@ -210,16 +221,19 @@
             </div>
             <div>
               <h2 class="heading-secondary">ফায়ার সার্ভিস</h2>
-              <p class="font-roboto mb-6">Fire Service</p>
+              <p
+                class="font-roboto mb-6 xs:text-[.75rem] sm:text-sm lg:text-base">
+                Fire Service
+              </p>
             </div>
             <div>
               <p
-                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                class="text-dark font-bold font-roboto text-[2rem] xs:text-[1.5rem] sm:text-[1.625rem]">
                 999
               </p>
               <!-- pill -->
               <p
-                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 xs:text-[.6875rem] sm:text-sm">
                 ফায়ার
               </p>
             </div>
@@ -239,7 +253,7 @@
           </article>
           <!-- Card 4 -->
           <article
-            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md xs:flex xs:flex-col xs:justify-between">
             <div class="flex justify-between items-center mb-4">
               <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
                 <img src="./assets/ambulance.png" alt="Ambulance Icon" />
@@ -248,16 +262,19 @@
             </div>
             <div>
               <h2 class="heading-secondary">অ্যাম্বুলেন্স</h2>
-              <p class="font-roboto mb-6">Ambulance</p>
+              <p
+                class="font-roboto mb-6 xs:text-[.75rem] sm:text-sm lg:text-base">
+                Ambulance
+              </p>
             </div>
             <div>
               <p
-                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                class="text-dark font-bold font-roboto text-[2rem] xs:text-[1.5rem] sm:text-[1.625rem]">
                 1994-999999
               </p>
               <!-- pill -->
               <p
-                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 xs:text-[.6875rem] sm:text-sm">
                 স্বাস্থ্য
               </p>
             </div>
@@ -276,7 +293,7 @@
           </article>
           <!-- Card 5 -->
           <article
-            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md xs:flex xs:flex-col xs:justify-between">
             <div class="flex justify-between items-center mb-4">
               <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
                 <img
@@ -287,16 +304,19 @@
             </div>
             <div>
               <h2 class="heading-secondary">নারী ও শিশু সহায়তা</h2>
-              <p class="font-roboto mb-6">Women & Child Helpline</p>
+              <p
+                class="font-roboto mb-6 xs:text-[.75rem] sm:text-sm lg:text-base">
+                Women & Child Helpline
+              </p>
             </div>
             <div>
               <p
-                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                class="text-dark font-bold font-roboto text-[2rem] xs:text-[1.5rem] sm:text-[1.625rem]">
                 109
               </p>
               <!-- pill -->
               <p
-                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 xs:text-[.6875rem] sm:text-sm">
                 সহায়তা
               </p>
             </div>
@@ -315,7 +335,7 @@
           </article>
           <!-- Card 6 -->
           <article
-            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md xs:flex xs:flex-col xs:justify-between">
             <div class="flex justify-between items-center mb-4">
               <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
                 <img
@@ -326,16 +346,19 @@
             </div>
             <div>
               <h2 class="heading-secondary">দুদক</h2>
-              <p class="font-roboto mb-6">Anti-Corruption</p>
+              <p
+                class="font-roboto mb-6 xs:text-[.75rem] sm:text-sm lg:text-base">
+                Anti-Corruption
+              </p>
             </div>
             <div>
               <p
-                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                class="text-dark font-bold font-roboto text-[2rem] xs:text-[1.5rem] sm:text-[1.625rem]">
                 106
               </p>
               <!-- pill -->
               <p
-                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 xs:text-[.6875rem] sm:text-sm">
                 সরকারি
               </p>
             </div>
@@ -354,7 +377,7 @@
           </article>
           <!-- Card 7 -->
           <article
-            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md xs:flex xs:flex-col xs:justify-between">
             <div class="flex justify-between items-center mb-4">
               <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
                 <img src="./assets/outage.png" alt="Electricity Outage Icon" />
@@ -363,16 +386,19 @@
             </div>
             <div>
               <h2 class="heading-secondary">বিদ্যুৎ বিভ্রাট</h2>
-              <p class="font-roboto mb-6">Electricity Outage</p>
+              <p
+                class="font-roboto mb-6 xs:text-[.75rem] sm:text-sm lg:text-base">
+                Electricity Outage
+              </p>
             </div>
             <div>
               <p
-                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                class="text-dark font-bold font-roboto text-[2rem] xs:text-[1.5rem] sm:text-[1.625rem]">
                 16216
               </p>
               <!-- pill -->
               <p
-                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 xs:text-[.6875rem] sm:text-sm">
                 বিদ্যুৎ
               </p>
             </div>
@@ -391,7 +417,7 @@
           </article>
           <!-- Card 8 -->
           <article
-            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md xs:flex xs:flex-col xs:justify-between">
             <div class="flex justify-between items-center mb-4">
               <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
                 <img src="./assets/brac.png" alt="Brac Icon" />
@@ -400,16 +426,19 @@
             </div>
             <div>
               <h2 class="heading-secondary">ব্র্যাক</h2>
-              <p class="font-roboto mb-6">Brac</p>
+              <p
+                class="font-roboto mb-6 xs:text-[.75rem] sm:text-sm lg:text-base">
+                Brac
+              </p>
             </div>
             <div>
               <p
-                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                class="text-dark font-bold font-roboto text-[2rem] xs:text-[1.5rem] sm:text-[1.625rem]">
                 16445
               </p>
               <!-- pill -->
               <p
-                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 xs:text-[.6875rem] sm:text-sm">
                 এনজিও
               </p>
             </div>
@@ -428,7 +457,7 @@
           </article>
           <!-- Card 9 -->
           <article
-            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md lg:flex lg:flex-col lg:justify-between">
+            class="p-6 lg:px-4.5 lg:py-6 rounded-xl bg-white shadow-md xs:flex xs:flex-col xs:justify-between">
             <div class="flex justify-between items-center mb-4">
               <figure class="rounded-xl w-[50px] bg-iconBg p-3.5">
                 <img
@@ -439,16 +468,19 @@
             </div>
             <div>
               <h2 class="heading-secondary">বাংলাদেশ রেলওয়ে</h2>
-              <p class="font-roboto mb-6">Bangladesh Railway</p>
+              <p
+                class="font-roboto mb-6 xs:text-[.75rem] sm:text-sm lg:text-base">
+                Bangladesh Railway
+              </p>
             </div>
             <div>
               <p
-                class="text-dark font-bold font-roboto text-[2rem] sm:text-[1.625rem]">
+                class="text-dark font-bold font-roboto text-[2rem] xs:text-[1.5rem] sm:text-[1.625rem]">
                 163
               </p>
               <!-- pill -->
               <p
-                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 text-sm">
+                class="bg-gray-light text-center rounded-full px-3.5 py-1.5 w-max font-extrabold mb-6 xs:text-[.6875rem] sm:text-sm">
                 পরিবহন
               </p>
             </div>
@@ -467,7 +499,7 @@
           </article>
         </section>
         <!-- Call history -->
-        <aside class="md:basis-[30%] bg-white px-4 py-6 rounded-xl">
+        <aside class="lg:basis-[28%] bg-white px-4 py-6 rounded-xl">
           <div class="flex items-center justify-between mb-5">
             <div class="flex gap-1 items-center">
               <svg
