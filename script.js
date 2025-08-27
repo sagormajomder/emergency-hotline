@@ -14,7 +14,8 @@ numCoinEl.innerText = data.numCoin;
 const callBtnEls = document.querySelectorAll('.callBtn');
 
 const numCopyEl = getIdElement('copyNum');
-const clearHistoryBtn = getIdElement('clearBtn');
+
+const callHistoryParentEl = getIdElement('callHistoryParent');
 
 // Helpers functions
 function getIdElement(id) {
@@ -22,7 +23,6 @@ function getIdElement(id) {
 }
 
 function renderCallHistory() {
-  const callHistoryParentEl = getIdElement('callHistoryParent');
   callHistoryParentEl.innerHTML = '';
   let html = '';
 
@@ -47,6 +47,12 @@ for (const heartBtnEl of heartBtnEls) {
     numLikeBtnEl.innerText = data.numHeart;
   });
 }
+
+// Listener to clear History
+getIdElement('clearBtn').addEventListener('click', function () {
+  data.services = [];
+  callHistoryParentEl.innerHTML = '';
+});
 
 // Listener for reducing coin
 for (const callBtnEl of callBtnEls) {
