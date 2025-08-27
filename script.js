@@ -53,6 +53,8 @@ for (const heartBtnEl of heartBtnEls) {
 
 // Listener to clear History
 getIdElement('clearBtn').addEventListener('click', function () {
+  if (data.services.length === 0) return;
+
   data.services = [];
   callHistoryParentEl.innerHTML = '';
 });
@@ -105,7 +107,7 @@ for (const callBtnEl of callBtnEls) {
     newService.time = new Date().toLocaleTimeString();
     data.services.push(newService);
 
-    alert(`📞Calling ${newService.name} ${newService.number}... `);
+    alert(`📞 Calling ${newService.name} ${newService.number}... `);
 
     data.numCoin -= 20;
     numCoinEl.innerText = data.numCoin;
