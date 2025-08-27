@@ -7,6 +7,7 @@ const data = {
 
 // elements
 const numLikeBtnEl = getIdElement('likeNum');
+numLikeBtnEl.innerText = data.numHeart;
 const heartBtnEls = document.querySelectorAll('.fa-heart');
 
 const numCoinEl = getIdElement('coinNum');
@@ -14,6 +15,8 @@ numCoinEl.innerText = data.numCoin;
 const callBtnEls = document.querySelectorAll('.callBtn');
 
 const numCopyEl = getIdElement('copyNum');
+numCopyEl.innerText = data.numCopy;
+const copyBtnEls = document.querySelectorAll('.copyBtn');
 
 const callHistoryParentEl = getIdElement('callHistoryParent');
 
@@ -54,6 +57,26 @@ getIdElement('clearBtn').addEventListener('click', function () {
   callHistoryParentEl.innerHTML = '';
 });
 
+// Listener to copy hot number
+for (const copyBtnEl of copyBtnEls) {
+  copyBtnEl.addEventListener('click', function (e) {
+    let number = '';
+    if (e.target.nodeName === 'I') {
+      number =
+        e.target.parentNode.parentNode.parentNode.children[2].children[0]
+          .innerText;
+    } else if (e.target.nodeName === 'BUTTON') {
+      number = e.target.parentNode.parentNode.children[2].children[0].innerText;
+    }
+
+    alert(`নম্বর কপি হয়েছে: ${number}`);
+    // Copy the number
+    navigator.clipboard.writeText(number);
+
+    data.numCopy++;
+    numCopyEl.innerText = data.numCopy;
+  });
+}
 // Listener for reducing coin
 for (const callBtnEl of callBtnEls) {
   callBtnEl.addEventListener('click', function (e) {
