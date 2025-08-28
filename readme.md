@@ -42,4 +42,16 @@ ulEl.appendChild(newLiEl);
 
 ### 3. What is Event Bubbling and how does it work?
 
-When a event trigger into a html element, the event is propagate through that element to it's parent, to grandparent, to great grandparent and so on untill the root element reach. This event propagate process is called Event bubbling. It is like climb the top most branch of a tree or water bubbles up to the water surface.
+When a event trigger into a html element, the event is propagate through the DOM tree from that element to it's parent, to grandparent, to great grandparent and so on untill the root element reach. This event propagate process is called Event bubbling. It is like climb the top most branch of a tree or water bubbles up to the water surface.
+
+### 4. What is Event Delegation in JavaScript? Why is it useful?
+
+Suppose We have to handle so much different types of event on different html elements. If we add 5 different event on a single html elements and we have to handle these 5 different event on 100 html elements then it could affect the website perfomance. Now as we know that js event are bubbling up through the DOM tree, so we can solve the problem just by delegating these events to the common parent of these html elements and handle these events on the handler function of parent element. This process is called event delegation in JS. In this way, we reduce the event handlers and increase the website performance.
+
+### 5. What is the difference between preventDefault() and stopPropagation() methods?
+
+When we called `preventDefault()` on a handler function, it helps us to prevent the default behevior of the browser generating by the html element corresponding events such as when submiting the form, normally form is reload the webpage. But if we use `preventDefault()`, the webpage is not reload.
+
+By default events are bubbling up through the DOM tree. If we don't want this behevior, we can simply prevent that by calling `stopPropagation()` method into the handler function.
+
+so `preventDefault()` help us to address the default behavior of the browers correspond to a html element's event and `stopPropagation()` help us to address the events propagation through the DOM tree.
