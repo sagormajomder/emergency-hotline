@@ -12,7 +12,7 @@
 #### getElementsByClassName()
 
 - It help us to select multiple html elements
-- It returns a live HTMLCollection which is an array-like object. That's why we can't apply any arroy method on this object. We can just iterate it using traditional `for` loop or `for...of` loop and can access it's items using index number.
+- It returns a live HTMLCollection which is an array-like object. That's why we can't apply any array method on this object. We can just iterate it using traditional `for` loop or `for...of` loop and can access it's items using index number.
 - To select elements, we have to put just `class` name of the element without any prefix like (.).
 - If no match element found, it return empty HTMLCollection.
 

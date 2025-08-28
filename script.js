@@ -5,21 +5,6 @@ const data = {
   numCopy: 0,
 };
 
-// elements
-const numLikeBtnEl = getIdElement('likeNum');
-numLikeBtnEl.innerText = data.numHeart;
-const heartBtnEls = document.querySelectorAll('.fa-heart');
-
-const numCoinEl = getIdElement('coinNum');
-numCoinEl.innerText = data.numCoin;
-const callBtnEls = document.querySelectorAll('.callBtn');
-
-const numCopyEl = getIdElement('copyNum');
-numCopyEl.innerText = data.numCopy;
-const copyBtnEls = document.querySelectorAll('.copyBtn');
-
-const callHistoryParentEl = getIdElement('callHistoryParent');
-
 // Helpers functions
 function getIdElement(id) {
   return document.getElementById(id);
@@ -42,6 +27,21 @@ function renderCallHistory() {
   }
   callHistoryParentEl.innerHTML = html;
 }
+
+// elements
+const numLikeBtnEl = getIdElement('likeNum');
+numLikeBtnEl.innerText = data.numHeart;
+const heartBtnEls = document.querySelectorAll('.fa-heart');
+
+const numCoinEl = getIdElement('coinNum');
+numCoinEl.innerText = data.numCoin;
+const callBtnEls = document.querySelectorAll('.callBtn');
+
+const numCopyEl = getIdElement('copyNum');
+numCopyEl.innerText = data.numCopy;
+const copyBtnEls = document.querySelectorAll('.copyBtn');
+
+const callHistoryParentEl = getIdElement('callHistoryParent');
 
 // Listener for adding Like number
 for (const heartBtnEl of heartBtnEls) {
