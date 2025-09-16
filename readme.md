@@ -1,3 +1,35 @@
+## Emergency Hotline - Instant Access to Critical Help—Anytime, Anywhere
+
+A web-based platform designed to centralize and streamline access to emergency contact numbers across Bangladesh. This project aims to provide fast, reliable, and user-friendly access to critical services like police, fire, medical, and disaster response—empowering citizens with life-saving information when it matters most.
+
+দ্রুত ও নির্ভরযোগ্য জরুরি হটলাইন, নাগরিকদের গুরুত্বপূর্ণ সেবার সঙ্গে যুক্ত করে—নিরাপত্তা, সহায়তা ও তাৎক্ষণিক প্রতিক্রিয়া নিশ্চিত করে
+
+## Table of Contents
+
+- [Run it Locally](#run-it-locally)
+- [Necessary Links](#necessary-links)
+- [Some Q/A](#answer-the-following-questions)
+- [Credit](#credit)
+
+## Run it Locally
+
+Please follow the below instructions to run this project in your machine:
+
+1. Clone this repository
+
+   ```sh
+       git clone https://github.com/sagormajomder/emergency-hotline.git
+   ```
+
+2. Open the directory "emergency-hotline" into visual studio code and contribute
+3. Install`live server` extension on vscode and run to see the project in browser
+
+The project will be available on http://127.0.0.1:5500/ by default.
+
+## Necessary Links
+
+- [Figma Design](https://www.figma.com/design/CB0Udl7Vu0EKWePmRnlGHz/emergency-Hotline?node-id=0-1&t=bBhVgKBLggpCA0tC-1)
+
 ## Answer the following questions
 
 ### 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
@@ -55,3 +87,7 @@ When we called `preventDefault()` on a handler function, it helps us to prevent 
 By default events are bubbling up through the DOM tree. If we don't want this behevior, we can simply prevent that by calling `stopPropagation()` method into the handler function.
 
 so `preventDefault()` help us to address the default behavior of the browers correspond to a html element's event and `stopPropagation()` help us to address the events propagation through the DOM tree.
+
+## Credit
+
+It is an assignment project and designed by [Programming Hero](https://github.com/ProgrammingHero1)
